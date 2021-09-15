@@ -2,12 +2,13 @@
  * @auther zhouzibo
  * @date 2021/9/15
  */
+const { v4: uuidv4 } = require('uuid');
 const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
 const FormData = require('form-data');
 const _ = require('lodash');
-const ipfsPath = process.argv[3] ? process.argv[3] : 'test';
+const ipfsPath = uuidv4();
 const fromPath = process.argv[2]
 const url = `https://ipfs-gw.decloud.foundation/api/v0/add`
 const { createLogger, format, transports } = require('winston');
@@ -34,7 +35,7 @@ function getAllFiles(dirPath, ipfsPath) {
             arrayOfFiles = _.concat(arrayOfFiles, getAllFiles(dirPath + "/" + file, ipfsPath));
         } else {
             const absPath = path.join(dirPath, "/", file);
-            const realPath = _.replace(absPath, fromPath,ipfsPath);
+            const realPath = _.replace(absPath, fromPath, ipfsPath);
             arrayOfFiles.push({
                 absPath: absPath,
                 path: realPath,

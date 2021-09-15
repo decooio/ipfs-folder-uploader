@@ -14,7 +14,7 @@ npm install
 ### 2.Upload folder
 
 ```shell
-node index.js /{LOCALPATH} {IPFS_FOLDER_NAME}
+node index.js /{LOCALPATH}
 ```
 
 
