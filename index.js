@@ -75,7 +75,7 @@ async function uploadFiles() {
     });
     const resultArr = result.data.split('\n');
     const folder = JSON.parse(resultArr[resultArr.length - 2]);
-    logger.info(`ipfs folder name: ${folder.Name} cid: ${folder.Hash} size: ${folder.Size}`);
+    logger.info(`ipfs url: https://ipfs-gw.decloud.foundation/ipfs/${folder.Hash} cid: ${folder.Hash} size: ${folder.Size}`);
 }
 
 uploadFiles()
