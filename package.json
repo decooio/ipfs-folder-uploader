@@ -1,0 +1,17 @@
+{
+  "name": "file-uploader",
+  "version": "1.0.0",
+  "description": "file uploader use crust ipfs gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "form-data": "^4.0.0",
+    "lodash": "^4.17.21",
+    "winston": "^3.3.3"
+  }
+}
